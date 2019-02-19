@@ -6,26 +6,30 @@
 ## Motivation
 
 Project to bring chaos to the network to improve architecture, process and skills.
+Networks are mission critical and we require as close to 100% availability as possible. With the Chaos Network Monkey it brings chaos to the network to test the availability of the network and to provide teams with the opportunity to practice their skills 
+
 
 
 ## Features
 
 Include a succinct summary of the features/capabilities of your project.
 
-- Random Switch reload
+- Random Switch reload (simulating a device failure)
 - Random link shutdown 
+- CPU Spike test
 
 
 
 **Cisco Products & Services:**
 
 - Product DNAC Center 1.2+
-=
+
 
 
 ## Usage
 
 Run main.py (python main.py) and enjoy the chaos
+A menu allows you to select the type of failures that you want to see.
 
 ## Installation
 

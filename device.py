@@ -124,6 +124,8 @@ class Device(apicem.Apicem):
                 self.device_id = (device['id'])
                 self.device_hostname = (device['hostname'])
                 print (self.device_hostname)
-                self.device_output = {'id':self.device_id, 'hostname':self.device_hostname}
+                #self.device_output = {'id':self.device_id, 'hostName':self.device_hostname, "type": "MANAGED_DEVICE_IP" }
+                #self.device_output = {'id':self.device_id, "type": "MANAGED_DEVICE_IP" }
+                self.device_output = {'id':'10.10.22.66', "type": "MANAGED_DEVICE_IP" }    
             self.device_counter = self.device_counter + 1
         return self.device_output

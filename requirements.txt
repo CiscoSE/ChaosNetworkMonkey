@@ -1,1 +1,7 @@
-click
+requests
+flask
+chatterbox
+json
+random
+re
+pprint
