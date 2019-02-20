@@ -110,13 +110,12 @@ class Device(apicem.Apicem):
         else:
             self.message = 'No devices found in this location'
         return self.message
-            
 
     def get_random_device_id_host(self):
         self.device_count_int = ''
         self.response = ''
         self.device_count_int = self.device_count()
-        self.rnd = random.randint(1,self.device_count_int)
+        self.rnd = random.randint(1, self.device_count_int)
         self.response = self.get_all_devices()
         self.device_counter = 1
         for device in self.response['response']:
@@ -127,5 +126,21 @@ class Device(apicem.Apicem):
                 #self.device_output = {'id':self.device_id, 'hostName':self.device_hostname, "type": "MANAGED_DEVICE_IP" }
                 #self.device_output = {'id':self.device_id, "type": "MANAGED_DEVICE_IP" }
                 self.device_output = {'id':'10.10.22.66', "type": "MANAGED_DEVICE_IP" }    
+            self.device_counter = self.device_counter + 1
+        return self.device_output
+
+    def get_random_device_id_host(self):
+        self.device_count_int = ''
+        self.response = ''
+        self.device_count_int = self.device_count()
+        self.rnd = random.randint(1, self.device_count_int)
+        self.response = self.get_all_devices()
+        self.device_counter = 1
+        for device in self.response['response']:
+            if self.rnd == self.device_counter:
+                self.device_ip = (device['managementIpAddress'])
+                self.device_hostname = (device['hostname'])
+                print (self.device_hostname)
+                self.device_output = {'id': self.device_ip, "type": "MANAGED_DEVICE_IP" }    
             self.device_counter = self.device_counter + 1
         return self.device_output
