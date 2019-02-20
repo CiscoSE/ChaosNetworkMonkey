@@ -44,7 +44,7 @@ Smart people responsible for the creation and maintenance of this project:
 
 ## Credits
 
-Thanks to DevNet, the EMEAR Black Belt team, DNAC-Top5
+Thanks to DevNet, the EMEAR Black Belt team, Adam Rashford and DNAC-Top5 project
 
 ## License
 
